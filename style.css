@@ -1,55 +1,96 @@
 body {
     display: grid;
     grid-template-areas: 
-        "header header header"
-        "main main aside"
-        "footer footer footer";
-    grid-template-rows: 6em 1fr 1em;
-    grid-template-columns: 150px 1fr 150px;
+        "header header"
+        "main aside"
+        "footer aside";
+    grid-template-rows: 6em 1fr;
+    grid-template-columns: 1fr 350px;
     grid-gap: 20px;
     background-color: #f6f6f6;
+    margin-left: 100px; 
+    margin-right: 100px;
+    margin-top: 50px;
 }
 
-header {
+body > header {
     grid-area: header;
-}
-
-aside {
-    grid-area: aside;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
-
-nav {
-    xgrid-area: nav;
-    xdisplay: grid;
-    xgrid-gap: 5px;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
+    display: grid;
+    grid-template-areas: 
+        "title nav";  
+    grid-template-columns: 100px 1fr;
 }
 
 header > a {
+    grid-area: title;
+}
+
+header > nav {
+    position: relative;
+    grid-area: nav;
+    bottom: 10px;
+    height: 20px;
+    left: 40%;
+    display: grid;
+    grid-template-areas: 
+    "a a a";
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 40px 40px 40px;
+}
+
+header > nav a {
+    margin: 10px;
+    font: 1em sans-serif;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+    height: 62px;
+    text-align: center;
+}
+
+header > nav a > span {
+    position: relative;
+    top: 40%;
+}
+
+header > nav a:hover {
+    background-color: #f6f6f6;
+}
+
+body > aside {
+    grid-area: aside;
+    border: solid 1px black;
+}
+
+body > main {
+    grid-area: main;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+body > header > a {
     position: relative;
     left: 25%;
     text-decoration: none;
     width: 200px;
 }
 
-aside > img {
-    width: 150px;
-    height: 150px;
+body > aside > img {
+    width: 100px;
+    height: 100px;
 }
 
-header , aside , main , footer {
+body > aside > header {
+    font: 2em sans-serif;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+
+body > header , body > main , body > footer {
     border: solid 1px black;
     background-color: #fff;
 }
