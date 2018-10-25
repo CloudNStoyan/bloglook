@@ -2,11 +2,12 @@ body {
     display: grid;
     grid-template-areas: 
         "header header header"
-        "nav main aside"
+        "main main aside"
         "footer footer footer";
-    grid-template-rows: 3em 1fr 1em;
+    grid-template-rows: 6em 1fr 1em;
     grid-template-columns: 150px 1fr 150px;
     grid-gap: 20px;
+    background-color: #f6f6f6;
 }
 
 header {
@@ -26,20 +27,21 @@ footer {
 }
 
 nav {
-    grid-area: nav;
-    display: grid;
-    grid-gap: 5px;
+    xgrid-area: nav;
+    xdisplay: grid;
+    xgrid-gap: 5px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
-header span {
+header > a {
     position: relative;
-    top: 15px;
-    left: 50%;
+    left: 25%;
+    text-decoration: none;
+    width: 200px;
 }
 
 aside > img {
@@ -47,8 +49,7 @@ aside > img {
     height: 150px;
 }
 
-header , aside , main , footer, nav {
+header , aside , main , footer {
     border: solid 1px black;
-    background-color: rgb(140, 140, 140);
-    color: white;
+    background-color: #fff;
 }
