@@ -1,28 +1,32 @@
 body {
     display: grid;
     grid-template-areas: 
-        "header header"
-        "main aside"
-        "footer aside";
+        "header header header"
+        "logo logo logo"
+        "left-aside main right-aside"
+        "footer footer footer";
     grid-template-rows: 6em 1fr;
-    grid-template-columns: 1fr 350px;
-    grid-gap: 20px;
-    background-color: #f6f6f6;
-    margin-left: 100px; 
-    margin-right: 100px;
-    margin-top: 50px;
+    grid-template-columns: 350px 1fr 350px;
+    margin: 0px;
 }
 
 body > header {
     grid-area: header;
     display: grid;
     grid-template-areas: 
-        "title nav";  
+        "title nav"
+        "line line";
     grid-template-columns: 100px 1fr;
 }
 
 header > a {
     grid-area: title;
+}
+
+div#logo {
+    grid-area: logo;
+    background-image: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/image13.jpg");
+    height: 100px;
 }
 
 header > nav {
@@ -36,6 +40,12 @@ header > nav {
     "a a a";
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 40px 40px 40px;
+}
+
+header > div {
+    grid-area: line;
+    position: relative;
+    background-color: aqua;
 }
 
 header > nav a {
@@ -57,13 +67,27 @@ header > nav a:hover {
     background-color: #f6f6f6;
 }
 
-body > aside {
-    grid-area: aside;
-    border: solid 1px black;
+aside.right-aside {
+    grid-area: right-aside;
+    border: solid 1px gray;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+aside.left-aside {
+    grid-area: left-aside;
+    margin-left: 20px;
 }
 
 body > main {
     grid-area: main;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid 1px gray;
+    border-radius: 3px;
+    background-color: #f6f6f6;
 }
 
 body > footer {
@@ -77,20 +101,42 @@ body > header > a {
     width: 200px;
 }
 
-body > aside > img {
+aside.right-aside > img {
     width: 100px;
     height: 100px;
 }
 
-body > aside > header {
+aside.right-aside > header {
     font: 2em sans-serif;
     text-align: center;
-    border-bottom: 1px solid black;
 }
 
+article > header {
+    font: 2em sans-serif;
+    color: black;
+    text-align: center;
+    border-bottom: 2px solid black;
+    background-color: aquamarine;
+    -webkit-text-stroke: 0.50px;    
+}
 
+article > div.tags {
+    display: inline;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    margin-left: 10px;
+}
 
-body > header , body > main , body > footer {
-    border: solid 1px black;
+article > p {
+    font: 1em sans-serif;
+}
+
+article {
+    background-color: white;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+body > header , body > footer {
     background-color: #fff;
 }
