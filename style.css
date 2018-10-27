@@ -69,10 +69,6 @@ header > nav a:hover {
 
 aside.right-aside {
     grid-area: right-aside;
-    border: solid 1px gray;
-    border-radius: 3px;
-    margin-top: 20px;
-    margin-right: 20px;
 }
 
 aside.left-aside {
@@ -101,34 +97,42 @@ body > header > a {
     width: 200px;
 }
 
-aside.right-aside > img {
-    width: 100px;
-    height: 100px;
-}
-
-aside.right-aside > header {
-    font: 2em sans-serif;
-    text-align: center;
-}
-
 article > header {
     font: 2em sans-serif;
     color: black;
-    text-align: center;
-    border-bottom: 2px solid black;
-    background-color: aquamarine;
-    -webkit-text-stroke: 0.50px;    
+    margin: 2px;
+}
+
+article > div.line {
+    height: 2px;
+    background: #e1e1e1;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 article > div.tags {
-    display: inline;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+article > div.tags > a::before {
+    content: "#";
+}
+
+article > div.tags > a:not(:last-child)::after {
+    content: ", ";
+}
+
+article > div.tags > a {
+    text-decoration: none;
+    font: 1em sans-serif;
 }
 
 article > p {
     font: 1em sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 article {
