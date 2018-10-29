@@ -8,6 +8,7 @@ body {
     grid-template-rows: 6em 1fr;
     grid-template-columns: 350px 1fr 350px;
     margin: 0px;
+    min-height: 100%;
 }
 
 body > header {
@@ -86,10 +87,6 @@ body > main {
     background-color: #f6f6f6;
 }
 
-body > footer {
-    grid-area: footer;
-}
-
 body > header > a {
     position: relative;
     left: 25%;
@@ -142,8 +139,9 @@ article {
 }
 
 footer {
+    grid-area: footer;
     background-color: #333;
-    height: 100px;
+    xheight: 100px;
     margin-top: 20px;
 }
 
