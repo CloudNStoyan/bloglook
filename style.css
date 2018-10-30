@@ -1,14 +1,13 @@
 body {
     display: grid;
     grid-template-areas: 
-        "header header header"
-        "logo logo logo"
-        "left-aside main right-aside"
-        "footer footer footer";
-    grid-template-rows: 6em 1fr;
-    grid-template-columns: 350px 1fr 350px;
+        "header"
+        "logo"
+        "main"
+        "footer";
+    grid-template-rows: 6em;
+    grid-template-columns: 1fr;
     margin: 0px;
-    min-height: 100%;
 }
 
 body > header {
@@ -80,8 +79,8 @@ aside.left-aside {
 body > main {
     grid-area: main;
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 370px;
+    margin-right: 370px;
     border: solid 1px gray;
     border-radius: 3px;
     background-color: #f6f6f6;
