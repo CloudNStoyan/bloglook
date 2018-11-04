@@ -159,6 +159,9 @@ footer a {
 
 footer > div.license {
     color: white;
+    position: relative;
+    left: 50%;
+    top: 0;
 }
 
 footer > div.license a {
