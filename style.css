@@ -104,6 +104,10 @@ article > header {
     margin: 2px;
 }
 
+article > header > a {
+    text-decoration: none;
+}
+
 article > div.line {
     height: 2px;
     background: #e1e1e1;
@@ -159,9 +163,9 @@ footer a {
 
 footer > div.license {
     color: white;
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 0;
+    bottom: 0;
 }
 
 footer > div.license a {
