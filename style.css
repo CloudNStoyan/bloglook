@@ -1,11 +1,14 @@
+html {
+    min-height: 100%;
+}
+
 body {
     display: grid;
     grid-template-areas: 
         "header"
-        "logo"
         "main"
         "footer";
-    grid-template-rows: 100px;
+    grid-template-rows: 200px;
     grid-template-columns: 1fr;
     margin: 0px;
 }
@@ -15,8 +18,11 @@ body > header {
     display: grid;
     grid-template-areas: 
         "title nav"
-        "line line";
+        "logo logo";
     grid-template-columns: 100px 1fr;
+    position: sticky;
+    background-color: white;
+    top: 0;
 }
 
 header > a {
@@ -27,6 +33,7 @@ div#logo {
     grid-area: logo;
     background-image: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/image13.jpg");
     height: 100px;
+    border-top: solid aqua 5px;
 }
 
 header > nav {
@@ -40,12 +47,6 @@ header > nav {
     "a a a";
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 40px 40px 40px;
-}
-
-header > div {
-    grid-area: line;
-    position: relative;
-    background-color: aqua;
 }
 
 header > nav a {
@@ -145,7 +146,7 @@ footer {
     grid-area: footer;
     background-color: #333;
     margin-top: 20px;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
