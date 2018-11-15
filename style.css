@@ -170,3 +170,48 @@ footer > div.license {
 footer > div.license a {
     color: darkblue;
 }
+
+@media (min-width: 375px) {
+	body {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        grid-template-rows: 200px;
+        grid-template-columns: 68rem;
+        margin: 0px;
+    }
+
+    body > main {
+        grid-area: main;
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+        border: solid 1px gray;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+    }
+    
+    footer {
+        grid-area: footer;
+        background-color: #333;
+        margin-top: 20px;
+        position: sticky;
+        bottom: 0;
+        height: 15rem;
+        width: 100%;
+        font-size: 3rem;
+    }
+    
+    header > nav a {
+        margin: 10px;
+        font: 1em sans-serif;
+        padding: 1em;
+        text-decoration: none;
+        color: black;
+        height: 62px;
+        text-align: center;
+    }
+    
+}
