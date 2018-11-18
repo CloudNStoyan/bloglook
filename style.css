@@ -146,10 +146,12 @@ footer {
     grid-area: footer;
     background-color: #333;
     margin-top: 20px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+
 
 footer > div {
     margin: 20px;
