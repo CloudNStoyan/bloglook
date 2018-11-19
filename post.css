@@ -4,6 +4,18 @@ main > header {
     text-align: center;
 }
 
+body {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "comments"
+        "footer";
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr;
+    margin: 0px;
+}
+
 main > p {
     margin-left: 10px;
     margin-right: 10px;
@@ -29,24 +41,34 @@ main > div.tags a:not(:first-child) {
 }
 
 div.comment-section {
+    grid-area: comments;
     margin-left: 370px;
     margin-right: 370px;
     margin-top: 20px;
 }
 
-div.comment-section > div.container {
+div.comment-section > div.create-comment-container {
     margin-top: 20px;
 }
 
-div.comment-section > div.container textarea {
+div.comment-section > div.create-comment-container textarea {
     min-width: 300px;
     min-height: 150px;
 }
 
-div.comment-section > div.container button {
+div.comment-section > div.create-comment-container button {
     border: 1px solid #3bc2ab;
     cursor: pointer;
     background-color: white;
     font-size: 1.1em;
     display: block;
+}
+
+div.comments-container {
+    background-color: white;
+    border: 1px solid #e1e1e1;
+}
+
+div.comments-container > div.comment {
+
 }
