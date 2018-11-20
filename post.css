@@ -64,11 +64,31 @@ div.comment-section > div.create-comment-container button {
     display: block;
 }
 
+div.avatar > img{
+    width: 50px;
+    height: 50px;
+}
+
 div.comments-container {
     background-color: white;
     border: 1px solid #e1e1e1;
 }
 
-div.comments-container > div.comment {
+div.comment > header {
+    display: grid;
+    grid-template-areas: "avatar name"
+    "date date";
+}
 
+div.comment > header > div.avatar {
+    grid-area: avatar;
+    grid-column: 50px;
+}
+
+div.comment > header > div.profile-name {
+    grid-area: name;
+}
+
+div.comment > header > div.date {
+    grid-area: date;
 }
