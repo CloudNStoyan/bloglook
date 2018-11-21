@@ -74,6 +74,11 @@ div.comments-container {
     border: 1px solid #e1e1e1;
 }
 
+div.comment {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+}
+
 div.comment > header {
     display: grid;
     grid-template-areas: "avatar name"
@@ -91,4 +96,4 @@ div.comment > header > div.profile-name {
 
 div.comment > header > div.date {
     grid-area: date;
-}.
+}
