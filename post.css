@@ -67,6 +67,7 @@ div.comment-section > div.create-comment-container button {
 div.avatar > img{
     width: 50px;
     height: 50px;
+    border: 1px solid aqua;
 }
 
 div.comments-container {
@@ -76,7 +77,6 @@ div.comments-container {
 
 div.comment {
     border: 5px solid #e1e1e1;
-    position: block;
     margin: 10px;
     background-color: #fff;
 }
@@ -86,21 +86,26 @@ div.comment div.avatar {
 }
 
 div.comment span.profile-name {
+    text-align: top;
 }
 
 div.comment span.date {
     display: block;
 }
 
-div.comment > header > div.avatar {
-    grid-area: avatar;
-    grid-column: 50px;
-}
+@media (min-width: 375px) and (max-width: 1024px) {
+    body > main {
+        margin-top: 20px;
+        margin: 0;
+        width: 100%;
+        border: solid 1px gray;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+    }
 
-div.comment > header > div.profile-name {
-    grid-area: name;
-}
+    body > div.comment-section {
+        width: 100%;
+        margin: 0;
 
-div.comment > header > div.date {
-    grid-area: date;
+    }
 }
