@@ -25,10 +25,6 @@ body > header {
     top: 0;
 }
 
-header > a {
-    grid-area: title;
-}
-
 div#logo {
     grid-area: logo;
     background-image: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/image13.jpg");
@@ -45,7 +41,7 @@ header > nav {
     display: grid;
     grid-template-areas: 
     "a a a";
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 40px 40px 40px;
 }
 
@@ -88,6 +84,7 @@ body > main {
 }
 
 body > header > a {
+    grid-area: title;
     position: relative;
     left: 25%;
     text-decoration: none;
@@ -186,6 +183,18 @@ footer > div.license a {
         margin: 0px;
     }
 
+    body > header {
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+            "title nav"
+            "logo logo";
+        grid-template-columns: 350px 1fr;
+        position: sticky;
+        background-color: white;
+        top: 0;
+    }
+
     body > main {
         grid-area: main;
         margin-top: 20px;
@@ -208,13 +217,29 @@ footer > div.license a {
     }
     
     header > nav a {
-        margin: 10px;
-        font: 1em sans-serif;
-        padding: 1em;
+        margin: 0;
+        font: 2.1em sans-serif;
+        padding: 0;
         text-decoration: none;
         color: black;
-        height: 62px;
-        text-align: center;
+        height: 120px;
+        text-align: center;;
+    }
+
+    header > nav {
+        left: 0;
     }
     
+    body > header > a {
+        grid-area: title;
+        position: relative;
+        text-decoration: none;
+        width: 400px;
+        left: 20px;
+        font: 1.3em sans-serif;
+    }
+
+    header > div#logo {
+        width: 100%;
+    }
 }
