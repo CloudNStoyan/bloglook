@@ -73,6 +73,7 @@ div.avatar > img{
 div.comments-container {
     background-color: #f1f1f1;
     border: 1px solid #e1e1e1;
+    margin-bottom: 12%;
 }
 
 div.comment {
