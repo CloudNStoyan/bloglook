@@ -18,7 +18,8 @@ body > header.mobile {
     display: grid;
     color: white;
     grid-template-areas: 
-        "title buttons";
+        "title expand"
+        "expanded expanded";
     grid-template-columns: 1fr 1fr;
 
 }
@@ -27,13 +28,22 @@ body > header.mobile > div.title {
     grid-area: title;
 }
 
-body > header.mobile > div.buttons {
-    grid-area: buttons;
+body > header.mobile > div.expand {
+    grid-area: expand;
 }
 
-body > header.mobile > div.buttons > a.expand {
+body > header.mobile > div.expand > a.expand {
     text-decoration: none;
     color: white;
+}
+
+body > header.mobile > div.buttons-container {
+    background-color: red;
+    height: 900px;
+    width: 80%;
+    margin: 0 0 10% 10%;
+    z-index: 1;
+    grid-area: expanded;
 }
 
 body > header.desktop {
