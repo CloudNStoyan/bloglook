@@ -6,6 +6,7 @@ article > header {
 
 article > header > a {
     text-decoration: none;
+    color: rgb(85, 26, 139);
 }
 
 article > div.line {
@@ -32,6 +33,7 @@ article > div.tags > a:not(:last-child)::after {
 article > div.tags > a {
     text-decoration: none;
     font: 1em sans-serif;
+    color: rgb(85, 26, 139);
 }
 
 article > p {
