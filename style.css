@@ -13,23 +13,26 @@ body {
     margin: 0px;
 }
 
-body > header.mobile {
-    background-color: #333;
-    display: grid;
-    color: white;
-    grid-template-areas: 
-        "title expand"
-        "expanded expanded";
-    grid-template-columns: 1fr 1fr;
+div.shrunken {
+    display: none;
+}
 
+body > header.mobile {
+    display: grid;
 }
 
 body > header.mobile > div.title {
     grid-area: title;
+    font-size: 5.5em;
+    margin-top: 10%;
+    margin-left: 3%;
 }
 
 body > header.mobile > div.expand {
     grid-area: expand;
+    font-size: 5.5em;
+    margin-left: 80%;
+    margin-top: 10%;
 }
 
 body > header.mobile > div.expand > a.expand {
@@ -38,12 +41,23 @@ body > header.mobile > div.expand > a.expand {
 }
 
 body > header.mobile > div.buttons-container {
-    background-color: red;
-    height: 900px;
-    width: 80%;
-    margin: 0 0 10% 10%;
+    background-color: #333;
+    height: 150%;
+    width: 100%;
     z-index: 1;
     grid-area: expanded;
+    border-top: 1px solid white;
+}
+
+header.mobile > div.buttons-container > nav {
+    display: grid;
+}
+
+header.mobile > div.buttons-container > nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 5em;
+    margin-left: 2%;
 }
 
 body > header.desktop {
@@ -158,12 +172,22 @@ footer > div.license a {
         margin: 0px;
     }
 
-    body > header.mobile {
-        display: grid;
-    }
-
     body > header.desktop {
         display: none;
+    }
+
+    body > header.mobile {
+        background-color: #333;
+        display: grid;
+        color: white;
+        grid-template-areas: 
+            "title expand"
+            "expanded expanded";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 190px 190px;
+        position: fixed;
+        width: 100%;
+        height: 10%;
     }
 
     body > main {
@@ -185,32 +209,5 @@ footer > div.license a {
         height: 15rem;
         width: 100%;
         font-size: 3rem;
-    }
-    
-    header.desktop > nav a {
-        margin: 0;
-        font: 2.1em sans-serif;
-        padding: 0;
-        text-decoration: none;
-        color: black;
-        height: 120px;
-        text-align: center;;
-    }
-
-    header.desktop > nav {
-        left: 0;
-    }
-    
-    body > header.desktop > a {
-        grid-area: title;
-        position: relative;
-        text-decoration: none;
-        width: 400px;
-        left: 20px;
-        font: 1.3em sans-serif;
-    }
-
-    header.desktop > div#logo {
-        width: 100%;
     }
 }
